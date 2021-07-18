@@ -1,6 +1,5 @@
 package com.example.demo.persistence.repository;
 
-import com.example.demo.domain.User;
 import com.example.demo.persistence.entity.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

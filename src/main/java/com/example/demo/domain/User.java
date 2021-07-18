@@ -1,5 +1,6 @@
 package com.example.demo.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
@@ -7,6 +8,7 @@ import java.time.LocalDateTime;
 
 @Data
 @RequiredArgsConstructor
+@AllArgsConstructor
 public class User {
 
     private final String name;
@@ -30,6 +32,5 @@ public class User {
         } else {
             this.setGeneration(Generation.ALPHA);
         }
-
     }
 }
