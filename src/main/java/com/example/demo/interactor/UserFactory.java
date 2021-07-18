@@ -8,7 +8,9 @@ import java.time.LocalDateTime;
 @Component
 public class UserFactory {
 
-    User create(String name, String password) {
-        return new User(name, password, LocalDateTime.now());
+    User create(String name, String password, Integer yearOfBirth) {
+        User newUser = new User(name, password, yearOfBirth);
+        newUser.setCreationTime(LocalDateTime.now());
+        return newUser;
     }
 }

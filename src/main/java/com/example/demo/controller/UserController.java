@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.UserDto;
+import com.example.demo.dto.UserRequestModel;
 import com.example.demo.interactor.UserInteractor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,7 +15,7 @@ public class UserController {
     private final UserInteractor userInteractor;
 
     @PostMapping("/user")
-    public UserDto create(@RequestBody UserDto userTo) {
-        return userInteractor.create(userTo);
+    public UserDto create(@RequestBody UserRequestModel userRequestModel) {
+        return userInteractor.create(userRequestModel);
     }
 }

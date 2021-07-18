@@ -16,7 +16,11 @@ public class UserRepositoryAdapter implements UserGateway {
     @Override
     public void save(User user) {
         // TODO here should be a mapper call
-        UserEntity userEntity = new UserEntity(user.getName(), user.getPassword(), user.getCreationTime());
+        UserEntity userEntity = new UserEntity(user.getName(),
+                user.getPassword(),
+                user.getYearOfBirth(),
+                user.getGeneration(),
+                user.getCreationTime());
         userJpaRepository.save(userEntity);
     }
 }

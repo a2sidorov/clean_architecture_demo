@@ -1,5 +1,6 @@
 package com.example.demo.persistence.entity;
 
+import com.example.demo.domain.Generation;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,5 +22,7 @@ public class UserEntity {
     @Id
     private String name;
     private String password;
+    private Integer yearOfBirth;
+    private Generation generation;
     private LocalDateTime creationTime;
 }
