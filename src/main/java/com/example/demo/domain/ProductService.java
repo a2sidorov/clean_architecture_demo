@@ -16,7 +16,7 @@ public class ProductService {
     private final ProductConverter productConverter;
 
     public List<ProductDto> getProducts() {
-        return productConverter.convert(productRepository.getUsers());
+        return productConverter.convert(productRepository.getProducts());
     }
 
     public ProductDto create(ProductDto productDto) {

@@ -12,18 +12,18 @@ import java.util.List;
 @RequiredArgsConstructor
 public class ProductRepositoryImpl implements ProductRepository {
 
-    private final ProductJpaRepository userJpaRepository;
+    private final ProductJpaRepository productJpaRepository;
 
     @Override
-    public List<Product> getUsers() {
-        List<ProductEntity> userEntities = userJpaRepository.findAll();
-        return ProductEntityMapper.convert(userEntities);
+    public List<Product> getProducts() {
+        List<ProductEntity> productEntities = productJpaRepository.findAll();
+        return ProductEntityMapper.convert(productEntities);
     }
 
     @Override
     public void save(Product product) {
         // TODO here should be a mapper call
         ProductEntity productEntity = new ProductEntity(product.getName());
-        userJpaRepository.save(productEntity);
+        productJpaRepository.save(productEntity);
     }
 }

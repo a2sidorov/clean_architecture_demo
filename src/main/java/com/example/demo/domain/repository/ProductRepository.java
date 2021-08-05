@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ProductRepository {
 
-    List<Product> getUsers();
+    List<Product> getProducts();
 
-    void save(Product user);
+    void save(Product product);
 }

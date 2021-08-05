@@ -9,13 +9,13 @@ import java.util.stream.Collectors;
 @Component
 public class ProductConverter {
 
-    public ProductDto convert(Product user) {
-        return ProductDto.builder().name(user.getName())
+    public ProductDto convert(Product product) {
+        return ProductDto.builder().name(product.getName())
                 .build();
     }
 
-    public List<ProductDto> convert(List<Product> users) {
-        return users.stream().map(this::convert).collect(Collectors.toList());
+    public List<ProductDto> convert(List<Product> products) {
+        return products.stream().map(this::convert).collect(Collectors.toList());
 
     }
 }

@@ -12,7 +12,7 @@ public class ProductEntityMapper {
         return new Product(productEntity.getName());
     }
 
-    public static List<Product> convert(List<ProductEntity> userEntities) {
-        return userEntities.stream().map(ProductEntityMapper::convert).collect(Collectors.toList());
+    public static List<Product> convert(List<ProductEntity> productEntities) {
+        return productEntities.stream().map(ProductEntityMapper::convert).collect(Collectors.toList());
     }
 }
